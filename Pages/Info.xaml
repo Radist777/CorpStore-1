@@ -1,0 +1,60 @@
+﻿<Window x:Class="WPFModernVerticalMenu.Pages.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
+        mc:Ignorable="d"
+        Height="450" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid Loaded="wLoaded">
+            <Label  Content="Имя: "
+                    x:Name="name"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Margin="10,20,0,0"
+                Foreground="AliceBlue"    
+        FontSize="21"/>
+            <Label  Content="Фамилия: "
+                    x:Name="lname"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Margin="10,50,0,0"
+                Foreground="AliceBlue"    
+        FontSize="21"/>
+            <Label  Content="Всего баллов: "
+                    x:Name="score"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Margin="10,80,0,0"
+                Foreground="AliceBlue"    
+        FontSize="21"/>
+
+            <Button x:Name="clsBtn"
+                    Content="Отмена"
+                    Height="50"
+                    Width="70"
+                    Margin="0,0,0,10"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center" Click="closeCl"
+                     />
+            <ScrollViewer 
+                Width="380" Height="250" Margin="0,50,0,0" VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="historyBlock"
+                       HorizontalAlignment="Left"
+                       TextWrapping="Wrap"
+                       Text="История баллов: "
+        VerticalAlignment="Top"
+        
+                Foreground="AliceBlue"    
+        FontSize="21"/>
+            </ScrollViewer>
+            
+           
+        </Grid>
+    </Border>
+</Window>

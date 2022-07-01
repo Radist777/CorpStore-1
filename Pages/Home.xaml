@@ -1,0 +1,78 @@
+﻿<Page x:Class="WPFModernVerticalMenu.Pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
+      xmlns:core="clr-namespace:WPFModernVerticalMenu.List"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home" Loaded="PageLoaded">
+
+    <Border CornerRadius="5" Background="{DynamicResource PrimaryBackgroundColor}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Row="0" 
+                      Margin="10"
+                     HorizontalContentAlignment="Center"
+                     HorizontalAlignment="Center"
+                     FontSize="21"
+                      x:Name="listV" SelectionChanged="selectionIn"
+                      >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}" Width="160">Имя</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Width="270">Фамилия</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Score}"
+                                        
+                                        Width="100">Баллы</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <TextBlock Grid.Column="1"
+                       Text="Работники 1Ц"
+                       FontSize="21"
+                      
+                      
+                       HorizontalAlignment="Center"
+                       Margin="0,10,0,0"
+                       FontWeight="Bold"
+                       Foreground="Black"/>
+            <Button x:Name="addEmpBtn"
+                    Content="Добавить работника"
+                    FontSize="15"
+                    
+                    Height="40"
+                    Width="150"
+                    Margin="0,50,0,0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1" Click="addEmp"/>
+            <Button x:Name="addScore"
+                    IsEnabled="False"
+                    Content="Добавить баллы"
+                    FontSize="15"
+                    Height="40"
+                    Width="150"
+                    Margin="0,110,0,0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1" Click="addScore_Click"/>
+            <Button x:Name="info"
+                    IsEnabled="False"
+                    Content="Информация"
+                    FontSize="15"
+                    Height="40"
+                    Width="150"
+                    Margin="0,180,0,0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1" Click="infoClick"/>
+            
+
+        </Grid>
+    </Border>
+</Page>

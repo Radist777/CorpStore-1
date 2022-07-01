@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPFModernVerticalMenu.Pages.addEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
+        mc:Ignorable="d"
+        Height="450" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                     Content="Введите имя"
+                   FontSize="21"
+                   Foreground="Snow"
+                   Margin="50,0,0,25"
+                     VerticalAlignment="Bottom"/>
+            <TextBox x:Name="fName"
+                     Width="300"
+                    FontSize="21"
+                     VerticalAlignment="Bottom"
+                     />
+            <Label Grid.Row="1"
+                     Content="Введите фамилию"
+                   FontSize="21"
+                   Foreground="Snow"
+                   Margin="50,0,0,0"
+                     VerticalAlignment="Top"/>
+            <TextBox Grid.Row="1"
+                x:Name="lName"
+                     Width="300"
+                     FontSize="21"
+                     Margin="0,35,0,0"
+                     VerticalAlignment="Top"
+                     />
+            <Button x:Name="OkBtn"
+                    Content="Добавить"
+                    Height="50"
+                    Width="70"
+                    Margin="0,0,100,0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="1" Click="OkBtnCl"/>
+            <Button x:Name="clsBtn"
+                    Content="Отмена"
+                    Height="50"
+                    Width="70"
+                    Margin="100,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="1" Click="CloseClick"/>
+
+
+        </Grid>
+    </Border>
+</Window>
